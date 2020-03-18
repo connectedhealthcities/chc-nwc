@@ -2,6 +2,8 @@
 
 _Development and validation of diagnostic coding algorithm_
 
+[Stata Code can be downloaded from GitHub repository](https://github.com/connectedhealthcities/chc-nwc/blob/master/stata/chc-alrd-algorithm-v1.do)
+
 The standard approach for identifying admissions within administrative data is to focus exclusively on the primary (principal) discharge diagnosis code. However, ARLD is a complex condition and can present with a spectrum of symptoms, signs, specific disease complications and with other co-existing alcohol-related disorders. Inadequate identification of liver-related admissions based on primary diagnosis alone has been reported.  Hence, we needed to develop a better method for identifying cohorts of people with ARLD and their relevant emergency admissions from administrative data.  Each care episode contains up to 23 diagnostic codes, classified according to version 10 of the International Classification of Diseases (ICD-10).
 
 First, we flagged admissions with any of the six specific codes for ARLD recorded as primary diagnosis (Table S1) – referred to as _ARLD-Primary_ admissions and reflecting the standard approach. Next, we extracted admissions where such codes appeared in a non-primary position and created frequency tables of the primary diagnoses recorded for those admissions.  Two clinicians reviewed the tables independently, selecting primary codes compatible with emergency presentations of ARLD.  Any discrepancies were resolved by informal consensus.  This resulted in one code list for ‘_symptoms, signs or complications_’ of ARLD (e.g. jaundice, ascites, oesophageal varices, acute kidney injury, infections/sepsis, encephalopathy; Table S2) and another for ‘_other alcohol-specific conditions_’ (e.g. acute alcohol withdrawal or alcoholic gastritis; Table S3). Primary codes were rejected when judged to indicate that ARLD was not the main reason for admission (e.g. chronic obstructive airways disease).  
@@ -46,7 +48,6 @@ All higher order diagnoses must be either:
 
 (iv) Codes for liver disease without specific aetiology (e.g. cirrhosis, unspecified)
 
-[Stata Code can be downloaded from GitHub repository](https://github.com/connectedhealthcities/chc-nwc/blob/master/stata/chc-alrd-algorithm-v1.do)
 
 **Code lists**
 
