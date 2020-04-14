@@ -1,4 +1,5 @@
-# Connected Health Cities - North West Coast
+# Connected Health Cities 
+# North West Coast
 
 CHC NWC has produced a number of algorithms using Secondary Uses Services data provided by NHS Digital. The scripts for these analyses are provided here. Note that the data is not provided.
 

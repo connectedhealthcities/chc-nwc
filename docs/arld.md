@@ -6,7 +6,7 @@ _Development and validation of diagnostic coding algorithm_
 
 The standard approach for identifying admissions within administrative data is to focus exclusively on the primary (principal) discharge diagnosis code. However, ARLD is a complex condition and can present with a spectrum of symptoms, signs, specific disease complications and with other co-existing alcohol-related disorders. Inadequate identification of liver-related admissions based on primary diagnosis alone has been reported.  Hence, we needed to develop a better method for identifying cohorts of people with ARLD and their relevant emergency admissions from administrative data.  Each care episode contains up to 23 diagnostic codes, classified according to version 10 of the International Classification of Diseases (ICD-10).
 
-First, we flagged admissions with any of the six specific codes for ARLD recorded as primary diagnosis (Table S1) – referred to as _ARLD-Primary_ admissions and reflecting the standard approach. Next, we extracted admissions where such codes appeared in a non-primary position and created frequency tables of the primary diagnoses recorded for those admissions.  Two clinicians reviewed the tables independently, selecting primary codes compatible with emergency presentations of ARLD.  Any discrepancies were resolved by informal consensus.  This resulted in one code list for ‘_symptoms, signs or complications_’ of ARLD (e.g. jaundice, ascites, oesophageal varices, acute kidney injury, infections/sepsis, encephalopathy; Table S2) and another for ‘_other alcohol-specific conditions_’ (e.g. acute alcohol withdrawal or alcoholic gastritis; Table S3). Primary codes were rejected when judged to indicate that ARLD was not the main reason for admission (e.g. chronic obstructive airways disease).  
+First, we flagged admissions with any of the six specific codes for ARLD recorded as primary diagnosis (Table S1) – referred to as _ARLD-Primary_ admissions and reflecting the standard approach. Next, we extracted admissions where such codes appeared in a non-primary position and created frequency tables of the primary diagnoses recorded for those admissions.  Two clinicians reviewed the tables independently, selecting primary codes compatible with emergency presentations of ARLD.  Any discrepancies were resolved by informal consensus.  This resulted in one code list for '_symptoms, signs or complications_' of ARLD (e.g. jaundice, ascites, oesophageal varices, acute kidney injury, infections/sepsis, encephalopathy; Table S2) and another for '_other alcohol-specific conditions_' (e.g. acute alcohol withdrawal or alcoholic gastritis; Table S3). Primary codes were rejected when judged to indicate that ARLD was not the main reason for admission (e.g. chronic obstructive airways disease).  
 
 We also identified other categories of admission where a code for non-specific liver disease (e.g. other and unspecified cirrhosis of the liver; Table S4) co-existed with a code for an alcohol-specific condition - thereby suggesting the liver disease was alcohol-related.  Using the clinician-generated list for symptoms, signs and complications, we defined which of these admissions were also eligible for inclusion.  An algorithmic procedure was created to screen the dataset to identify admissions with any of the permitted coding combinations, referred to collectively as _ARLD-Algorithm_ admissions. This included ARLD-Primary admissions plus the extra admissions identified from alternative coding patterns (ARLD-Uplift). 
 
@@ -51,7 +51,7 @@ All higher order diagnoses must be either:
 
 **Code lists**
 
-**S1	ICD-10 codes for alcohol-related liver disease**
+**S1    ICD-10 codes for alcohol-related liver disease**
 
 <sup><strong> </strong></sup>
 
@@ -98,7 +98,7 @@ All higher order diagnoses must be either:
 
 
 
-**S2	ICD-10 codes for symptoms, signs or complications of liver disease**
+**S2    ICD-10 codes for symptoms, signs or complications of liver disease**
 
 
 <table>
@@ -443,7 +443,7 @@ All higher order diagnoses must be either:
 
 
 
-**S3	ICD-10 codes for other alcohol-specific conditions**
+**S3    ICD-10 codes for other alcohol-specific conditions**
 
 
 <table>
@@ -650,7 +650,7 @@ All higher order diagnoses must be either:
 
 
 
-**S4	ICD-10 codes for liver disease without a cause specified**
+**S4    ICD-10 codes for liver disease without a cause specified**
 
 
 <table>
