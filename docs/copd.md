@@ -1,8 +1,8 @@
 # ￼￼￼Connected Health Cities COPD Algorithm v1.0
 
-[Back]()
+[Back](index.html)
 
-[Stata Code can be downloaded from GitHub repository](https://github.com/connectedhealthcities/chc-nwc/blo'/master/stata/chc-copd-algorithm-v1.do)
+[Stata Code can be downloaded from GitHub repository](https://github.com/connectedhealthcities/chc-nwc/blob/master/stata/chc-copd-algorithm-v1.do)
 
 Development and validation of diagnostic coding algorithm
 Acute exacerbation of COPD is one of the most common reasons for emergency admission to hospital. The standard approach for identifying admissions within administrative data is to focus exclusively on the primary (principal) discharge diagnosis code. However, extending the analysis to the secondary codes gives a more realistic picture of the number of admissions. 

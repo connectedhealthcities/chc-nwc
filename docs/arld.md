@@ -2,7 +2,7 @@
 
 _Development and validation of diagnostic coding algorithm_
 
-[Back]()
+[Back](index.html)
 
 [Stata Code can be downloaded from GitHub repository](https://github.com/connectedhealthcities/chc-nwc/blob/master/stata/chc-alrd-algorithm-v1.do)
 
