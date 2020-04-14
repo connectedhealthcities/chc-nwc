@@ -1,6 +1,6 @@
 # ￼￼￼Connected Health Cities COPD Algorithm v1.0
 
-[Back](readme.md)
+[Back]()
 
 [Stata Code can be downloaded from GitHub repository](https://github.com/connectedhealthcities/chc-nwc/blo'/master/stata/chc-copd-algorithm-v1.do)
 
