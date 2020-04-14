@@ -1,5 +1,7 @@
 # ￼￼￼Connected Health Cities COPD Algorithm v1.0
 
+[Back](readme.md)
+
 [Stata Code can be downloaded from GitHub repository](https://github.com/connectedhealthcities/chc-nwc/blob/master/stata/chc-copd-algorithm-v1.do)
 
 Development and validation of diagnostic coding algorithm
@@ -15,26 +17,39 @@ The Secondary Uses Service (SUS) data separate hospital admissions according to 
 *    elective, i.e. a planned admission for specific investigation or procedure 
 
 COPD exacerbations present as unexpected emergencies so the first filter is to restrict the analysis to emergency.  The relevant codes for emergency admissions are:
+
 21
+
 22
+
 23
+
 24
+
 25
+
 2A
+
 2B
+
 2C
+
 2D
+
 28
 
-2. Restricting to emergencies admitted to "medical wards"  
+2. Restricting to emergencies admitted to "medical wards"
+
 Each hospital bed is coded with a specialty. When COPD is the primary reason for the admission, hospital processes direct that admission towards a medical bed (i.e. under the care of a physician), rather than any other bed (e.g. surgical, psychiatric, orthopaedic, obstetric etc.). Thus, it is rational to presume that an admission that includes a COPD code to any other speciality is using the COPD code to describe a co-morbid condition. The list of relevant medical speciality codes are included in appendix 1.
 
 
-3. Restricting to final episode of spell 
+3. Restricting to final episode of spell
+
 The coding system is set out in units of Finished Consultant Episodes, or FCEs. These are defined such that when a patient moves from the care of one consultant to the care of a second, each different consultant's input can be evaluated. Importantly, for our purposes, it is only at the end of a spell, i.e. end of the final episode, when the fullest diagnosis will have been apparent, and that is therefore the episode we use to define the diagnosis of the spell.
 
 4. Identifying those admissions which are likely to be related to COPD
-We have 3 lists of ICD10 codes used when running our algorithm. These are shown in appendix 2. 
+
+We have 3 lists of ICD10 codes used when running our algorithm. These are shown in appendix 2.
 
 The Stata .do file associated with this document does not include code for steps 1 to 3 above as the variable names associated with the filters can change between datasets. The Stata .do file is concerned with step 4. It creates variables as outlined below:
 The first step is to assign a new variable called 'status1'. The value for status1 is calculated for each episode as follows:
@@ -44,6 +59,7 @@ The first step is to assign a new variable called 'status1'. The value for statu
 *    if none of the above conditions are met then status1 = 0
 
 The next step is to assign a new variable called 'status2'. The value for status2 is calculated for each episode as follows:
+
 *    if any of list 1 are in the first secondary diagnosis field, then status2 = 1
 *    if any of list 2 are in the first secondary diagnosis field, then status2 = 2
 *    if any of list 3 are in the first secondary diagnosis field, then status2 = 3
@@ -83,45 +99,67 @@ The admissions where copdcat1 are equal to 1 are, therefore, our defined cohort 
 ## APPENDIX 1: MEDICAL SPECIALTY CODES
 
 The seizures algorithm requires that the treatment speciality is one of the following codes:
+
 180 Accident and Emergency
+
 192 Critical Care Medicine
+
 300 General Medicine
+
 301 Gastroenterology
+
 302 Endocrinology
+
 303 Clinical Haematology
+
 305 Clinical Pharmacology
+
 314 Rehabilitation
+
 315 Palliative Medicine
+
 320 Cardiology
+
 330 Dermatology
+
 340 Respiratory Medicine
+
 350 Infectious Diseases
+
 361 Nephrology
+
 370 Medical Oncology
+
 400 Neurology
+
 410 Rheumatology
+
 430 Geriatric Medicine
+
 820 General Pathology
+
 823 Haematology
+
 960 Allied Health Professional Episode
- 
+  
 ## APPENDIX 2: ICD10 CODES WHICH DENOTE A PROBABLE COPD ADMISSION
 
 **List 1:**
-J40X    Bronchitis not specified as acute or chronic
-J410    Simple chronic bronchitis
-J411    Mucopurulent chronic bronchitis
-J418    Mixed simple and mucopurulent chronic bronchitis
-J42X    Unspecified chronic bronchitis
-J430    MacLeod s syndrome
-J431    Panlobular emphysema
-J432    Centrilobular emphysema
-J438    Other emphysema
-J439    Emphysema unspecified
-J440    Chronic obstruct pulmonary dis with acute lower resp infec
-J441    Chron obstruct pulmonary dis wth acute exacerbation unspec
-J448    Other specified chronic obstructive pulmonary disease
-J449    Chronic obstructive pulmonary disease unspecified
+
+J40X    Bronchitis not specified as acute or chronic  
+J410    Simple chronic bronchitis  
+J411    Mucopurulent chronic bronchitis  
+J418    Mixed simple and mucopurulent chronic bronchitis  
+J42X    Unspecified chronic bronchitis  
+J430    MacLeod s syndrome  
+J431    Panlobular emphysema  
+J432    Centrilobular emphysema  
+J438    Other emphysema  
+J439    Emphysema unspecified  
+J440    Chronic obstruct pulmonary dis with acute lower resp infec  
+J441    Chron obstruct pulmonary dis wth acute exacerbation unspec  
+J448    Other specified chronic obstructive pulmonary disease  
+J449    Chronic obstructive pulmonary disease unspecified  
 
 **List 2:**
 B59X    Pneumocystosis
@@ -212,3 +250,5 @@ R51X    Headache
 R600    Localized oedema
 R601    Generalized oedema
 R609    Oedema unspecified
+
+[Back](readme.md)
